@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <style>
+      grid-template-columns: 1fr 1fr;
+         grid-template-rows: 1fr 1fr 1fr 1fr;
+         gap: 10px;
+
+      
+  text-align: center;
+         font-size: 60px;
+       body {
+        align-content: center;
+        background-color: #ff66cc;
+        color: blue;
+       }
+
+       .title {
+          grid-row-start: 1;
+          grid-row-end: 2;
+          grid-column-start: 1;
+          grid-column-end: 2;
+         font-size: 80px;
+         border; white 
+          }
+      
+      .guess {
+         grid-row-start: 2;
+          grid-row-end: 3;
+          grid-column-start: 1;
+          grid-column-end: 2;
+        
+      }
+      
+      .statement{
+         grid-row-start: 3;
+          grid-row-end: 4;
+          grid-column-start: 1;
+          grid-column-end: 2;
+      }
+    </style>
+  </head>
+  <body>
+      <div class="title">
+         Guess The Number
+    </div>
+    <div class="guess">
+    number = input ("Enter Number:")
+      
+    </div>
+  </body>
+</html>
