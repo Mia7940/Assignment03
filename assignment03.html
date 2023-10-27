@@ -1,0 +1,88 @@
+<html>
+
+<head>
+  <style>
+    body {
+      align-content: center;
+      background-color: #ff66cc;
+      color: yellow;
+    }
+
+    .title {
+      grid-row-start: 1;
+      grid-row-end: 2;
+      grid-column-start: 1;
+      grid-column-end: 2;
+      font-size: 80px;
+      margin-bottom: 10px;
+    }
+
+    .guess {
+      grid-row-start: 2;
+      grid-row-end: 3;
+      grid-column-start: 1;
+      grid-column-end: 2;
+
+    }
+
+    .statement {
+      grid-row-start: 3;
+      grid-row-end: 4;
+      grid-column-start: 1;
+      grid-column-end: 2;
+
+    }
+  </style>
+  <script>
+    var theNumber = 18;
+    var total = 0;
+    var message ="Guess the Number (1-100)" 
+
+    function guess() {
+      currentGuess = Number(document.getElementById("theGuess").value)
+
+if(currentGuess>theNumber) {
+  text= "Your too high!!! Guess lower :("
+}
+
+if(currentGuess<theNumber) {
+  text= "Your too LOW!!! Guess HIGHERR!! :("
+}
+
+if(currentGuess==theNumber) {
+  text= "CORRECT!! YOU GOT IT!!:("
+}
+
+total++;
+document.getElementById("amount").innerHTML="Number of Guesses: "+ total;
+
+document.getElementById("last").innerHTML="Last Guess: "+ currentGuess;
+sss
+
+      document.getElementById("range").innerHTML = text;
+    }
+  </script>
+</head>
+
+<body>
+  <div class="title">
+    Guess The Number
+  </div>
+  <p id="range">
+    From (1-100)
+  </p>
+  <div class="guess">
+    <input id="theGuess">
+    <button onclick="guess();">Guess the Number</button>
+  </div>
+
+  
+  <p id="amount"> Number of Guesses: 0
+  </p>
+
+  <p id="last">
+    Last Guess:
+  </p>
+</body>
+
+</html>
